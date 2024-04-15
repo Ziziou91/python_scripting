@@ -21,7 +21,8 @@ Instead of reinventing the wheel every time we need to do something, we are usin
 
 ![Scripting vs Programming](https://visionx.io/wp-content/uploads/2023/03/Scripting-Language-vs-Programming-Language-300x300.png)
 
-## Some examples of python libraries 
+##Popular python libraries 
+Python comes with many useful built-in libraries (collections of useful classes and functions). Here are some examples:
 
 ````python
 import datetime
@@ -45,5 +46,20 @@ def load_json(file_name: str) -> dict:
             return data
 
 ````
+As well as being widely used, tested and understood, many of these built-in libraries make use of lower-level 
+programming. This makes them more efficient, a very useful trait when working with larger applications and datasets.
 
+We can write scripts to make the most of this existing functionality.
 
+## Examples of scripts a DevOps engineer might use
+
+1) Reading and writing information to and from a database
+2) Concurrent programming and waiting for responses from a server (async)
+3) Working accurately with large numbers or datasets
+4) Formatting print statements in an error message (color, bold or layout)
+5) Testing with a suite like pytest
+6) Providing access to the hardware layer
+7) Bringing in and converting data (json)
+8) Exiting the application when appropriate (sys.exit)
+9) Abstracting, or hiding, paths and environment variables
+10) Detecting the OS the python app is running on
