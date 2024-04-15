@@ -1,7 +1,9 @@
 # Scripting
 
+# What is scripting?
+
 When working with code (be it implementing new features, or interacting with existing functionality), we benefit from a
-wealth of existing resources available. Resources like Stack Overflow are a great place to read up on how to implement
+wealth of existing knowledge available. Resources like [Stack Overflow](https://stackoverflow.com/) are a great place to read up on how to implement
 code, as well as best practices for a range of languages and libraries.
 
 It makes sense to use the good work and knowledge available to us to improve our projects, and we don't have to limit
@@ -11,29 +13,34 @@ functions created to solve common problems, and python is no exception to this.
 In fact, Python has perhaps one of the richest libraries of pre-built classes and functions. This functionality is 
 typically bundled into either modules or packages. We can refer to using these modules as **Scripting**.
 
-Instead of reinventing the wheel every time we need to do something, we are using existing code.
+Instead of reinventing the wheel every time we need to do something, we can use existing code thanks to scripting.
 
 ## Benefits of scripting
 - Makes our code more human-readable by abstracting away much of the logic.
 - Our applications behaviour is more predictable when using pre-built functions. Documentation, as well as behaviour is widely understood and available.
+  - Further to this point, popular existing modules with be thoroughly tested and applied in a wide range of situations.
 - Other programmers will be familiar with popular modules and their use, so it will be easier for other people to use our app.
-- Popular modules will already be used in other parts of larger applications. We aren't repeating outselves.
+- Popular modules will already be used in other parts of larger applications. We aren't repeating ourselves.
+
+### Scripting vs programming
 
 ![Scripting vs Programming](https://visionx.io/wp-content/uploads/2023/03/Scripting-Language-vs-Programming-Language-300x300.png)
 
-##Popular python libraries 
-Python comes with many useful built-in libraries (collections of useful classes and functions). Here are some examples:
+## Popular python libraries 
+Python comes with many useful built-in libraries (collections of useful classes and functions) we can access thanks to 
+scripting. Here are some examples:
 
 ````python
 import datetime
 import json
 
+# datetime example
 def unnecessary_function(date_string: str) -> datetime.date:
     return datetime.date.fromisoformat(date_string)
 
 print(unnecessary_function("2024-04-15"))
 
-
+# json example
 def load_json(file_name: str) -> dict:
     """Opens and loads a json file then returns."""
     try:
