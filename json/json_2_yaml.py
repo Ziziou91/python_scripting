@@ -21,8 +21,8 @@ def load_json(file_name: str, path: str) -> dict:
 def write_yaml(data: dict, file_name: str, path) -> None:
     """Takes a dictionary and writes as yaml to given file name."""
     # Create a file name matching the json file given as sys.argv[1]
+    print(f"Given file_name {file_name}")
     file_name = file_name.split(".")[0]
-
     yaml_path = os.path.join(path, file_name)
     with open(f"{yaml_path}.yaml", "w") as file:
         yaml.dump(data, file, sort_keys=False)
@@ -34,8 +34,8 @@ def main() -> None:
     # Check if given a file name as an argument.
     if len(sys.argv) > 1:
         if os.path.exists(sys.argv[1]):
-            json_dict = load_json(sys.argv[1])
-            write_yaml(json_dict, sys.argv[1])
+            json_dict = load_json(sys.argv[1].split("/")[1], "./json_files")
+            write_yaml(json_dict, sys.argv[1].split("/")[1], "./yaml")
 
     # If not, convert all JSON files in json_files.
     else:
@@ -44,6 +44,7 @@ def main() -> None:
         for file_name in files:
             json_dict = load_json(file_name, "./json_files")
             write_yaml(json_dict, file_name, "./yaml")
+
 
 if __name__ == "__main__":
     main()
